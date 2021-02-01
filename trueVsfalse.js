@@ -1,14 +1,14 @@
-// falsy 
-//  0,
-//  "",
-//  undefined,
-// null,
-// NaN ,
-// false
+falsy 
+ 0,
+ "",
+ undefined,
+null,
+NaN ,
+false
 
-//truthy
+truthy
 
-// "0",' ',[], 
+"0",' ',[], 
 
 
 
