@@ -1,14 +1,14 @@
-falsy 
- 0,
- "",
- undefined,
-null,
-NaN ,
-false
+// falsy 
+//  0,
+//  "",
+//  undefined,
+// null,
+// NaN ,
+// false
 
-truthy
+// truthy
 
-"0",' ',[], 
+// "0",' ',[], 
 
 
 
@@ -21,7 +21,7 @@ truthy
 
 
 // const age=5;
-const names=null;
+const names =null;
 if (names) {
 console.log('condition is true');
     
@@ -29,4 +29,11 @@ console.log('condition is true');
 
 else{
     console.log('condition is false');
+}
+const person1='shakira';
+if (person1.length=!0) {
+    console.log('real shakira')
+}
+else{
+console.log('fake shakira')
 }
