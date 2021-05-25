@@ -11,5 +11,5 @@ output.push(result);
 const result1=array.map(function square(element) {
     return element*element;
 })
-console.log(result1)
+console.log(result1);
 

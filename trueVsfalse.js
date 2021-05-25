@@ -36,4 +36,16 @@ if (person1.length=!0) {
 }
 else{
 console.log('fake shakira')
-}
+} 
+
+
+if ('false') {
+    console.log("i am not false")
+        
+    }
+    else{
+    
+    console.log("i am false")
+    }
+
+
