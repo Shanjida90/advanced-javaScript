@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="iamBody">
+    <h1 id="activity-name"></h1>
+<h3>Learn by clicking here:<a href="">Click </a></h3>
+
+<script>
+function makeSomeFun() {
+    fetch("http://www.boredapi.com/api/activity/")
+    .then(res => res.json())
+    .then(data =>{
+document.getElementById('activity-name').innerText=data.activity;
+});
+} makeSomeFun();
+
+setInterval(() => {
+    makeSomeFun();
+}, 10000);
+document.getElementById('iamBody').style.backgroundColor='khaki';
+
+</script>
+</body>
+</html>

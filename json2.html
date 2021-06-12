@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="json2.css">
+</head>
+<body>
+    <h1>JSON placeholder</h1>
+<div id="background">
+<ul id="users-container"></ul></div>
+
+<script>
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => displayUser(json))
+function displayUser(users) {
+ const userNames=users.map(
+ user=>user.username
+//.||.... this is with traditional function not with ES6 function......||
+// function  (user) {
+//    const result=user.address.suite;
+// console.log(result)
+//  }
+);
+const ul=document.getElementById("users-container");
+for (let i = 0; i < userNames.length; i++) {
+  const user = userNames[i];
+const li=document.createElement("li");
+li.innerText=user;
+ul.appendChild(li);
+}
+}
+
+const background=document.getElementById("background");
+background.style.backgroundColor='#2367';
+</script>
+</body>
+</html>

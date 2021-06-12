@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Json placeholder</h1>
+
+<input type="text" id="title" placeholder="write your title"> <br> <br>
+<input type="text"  id="body-content" placeholder="body Content"> <br> <br>
+<button id="Button">submit</button>
+
+
+
+<script>
+
+
+
+document.getElementById("Button").addEventListener("click", function() {
+    const title=document.getElementById('title').value;
+const bodyContent=document.getElementById('body-content').value;
+const post={ title:title, body:bodyContent}
+nowPost(post);
+
+})
+function nowPost( postInfo) {
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify(postInfo),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+}
+</script>
+</body>
+</html>

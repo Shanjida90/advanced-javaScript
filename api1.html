@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1 id="giveWork">Take a class</h1>
+<h3>learb from: <a id="explore_link" href="">visit this place</a></h3>
+
+
+
+
+
+<script>
+
+
+function doSomething() {
+fetch("http://www.boredapi.com/api/activity/")
+.then (res=>res.json())
+.then(data=> {
+document.getElementById("giveWork").innerText=data;
+console.log(data)
+});
+}
+doSomething();   
+
+
+</script>
+</body>
+</html>

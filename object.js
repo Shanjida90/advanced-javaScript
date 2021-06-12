@@ -1,0 +1,18 @@
+const normalPerson={
+firstName:'rahim',
+lastName:'miya',
+salary:20000,
+getFullName:function(){
+    console.log(this.firstName, this.lastName)
+},
+chargeBill:function(amount){
+    this.salary=this.salary-amount;
+    return this.salary;
+}
+}
+
+normalPerson.chargeBill(15000);
+normalPerson.chargeBill(1000);
+
+console.log(normalPerson.salary);
+
