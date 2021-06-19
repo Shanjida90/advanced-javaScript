@@ -1,0 +1,28 @@
+#countries{
+display: grid;
+grid-template-columns:repeat(3, 1fr) ;
+grid-gap:10px;
+background-color: khaki;
+}
+
+h1{
+color: brown;
+text-align: center;
+font-size: 70px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+background-color: lightsteelblue;
+}
+.country{
+border: 1px solid goldenrod;
+border-radius: 20px;
+padding: 20px;
+color: #2da3f1;
+text-align: center;
+font-size: 35px;
+width: 300px;
+background-color: lightgreen;
+}
+.capital-name{
+color: #bb1266;
+font-size: 20px;
+};
